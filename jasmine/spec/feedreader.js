@@ -21,22 +21,36 @@ $(function() {
          * allFeeds in app.js to be an empty array and refresh the
          * page?
          */
+
+        /* TODO: Write a test that loops through each feed
+        * in the allFeeds object and ensures it has a URL defined
+        * and that the URL is not empty.
+        */
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a URL defined
-         * and that the URL is not empty.
-         */
+        it('url defined ', function() {
+            for(let feed of allFeeds) {
+                expect(feed.url).toBeDefined();
+                expect(feed.url.length).not.toBe(0);
+            }
+        });
 
-
         /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         */
+        * in the allFeeds object and ensures it has a name defined
+        * and that the name is not empty.
+        */
+
+        it('name defined', function() {
+            for(let feed of allFeeds) {
+                expect(feed.name).toBeDefined();
+                expect(feed.name.length).not.toBe(0);
+            }
+        });
+
     });
 
 
@@ -47,6 +61,11 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+
+        it('if it is hidden', function() {
+            const body = document.querySelector('body');
+            expect(body.classList.contains('menu-hidden')).toBe(true);
+        });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test

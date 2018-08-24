@@ -40,6 +40,8 @@ function init() {
  * This function all supports a callback as the second parameter
  * which will be called after everything has run successfully.
  */
+
+ /*cb = callback*/
  function loadFeed(id, cb) {
      var feedUrl = allFeeds[id].url,
          feedName = allFeeds[id].name;
@@ -116,6 +118,8 @@ $(function() {
      * the menu, load the feed, and prevent the default action
      * (following the link) from occurring.
      */
+
+     /*Toggles menu on and off*/
     feedList.on('click', 'a', function() {
         var item = $(this);
 
