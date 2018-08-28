@@ -34,4 +34,4 @@ In this project given a web-based application that reads RSS feeds. Testing to t
 - Ensure the menu element is hidden by default. You'll have to analyze the HTML and the CSS to determine how we're performing the hiding/showing of the menu element.
 - Ensure the menu changes visibility when the menu icon is clicked.
 - Ensure when the loadFeed function is called and completes its work, there is at least a single .entry element within the .feed container. Remember, loadFeed() is asynchronous so this test wil require the use of Jasmine's beforeEach and asynchronous done() function.
-- Ensure when a new feed is loaded by the loadFeed function that the content actually changes. Remember, loadFeed() is asynchronous.
+- Ensure when a new feed is loaded by the loadFeed function that the content actually changes.
