@@ -123,8 +123,13 @@ $(function() {
         });
 
         it('content changes', function() {
-            console.log(feed.children[0].innerText);
+            //console.log(feed.children[0].innerText);
+            Array.from(feed.children).forEach(function(entry, index) {
+                //console.log(entry.innerText, firstFeed[index], entry.innerText === firstFeed[index]);
+                expect(firstFeed.length).not.toBe(2);
+                expect(entry.innerText === firstFeed[index]).toBe(false);
+            });
         });
 
-    })
-})
+    });
+});
